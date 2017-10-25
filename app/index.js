@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import {AppContainer} from 'react-hot-loader';
 import './index.less';
 import './component/header.less'
-import Root from './component/root.js'
+import Root from './root.js'
 
 ReactDOM.render(
     <AppContainer>
@@ -13,8 +13,8 @@ ReactDOM.render(
 );
 
 if (module.hot) {
-    module.hot.accept('./component/root', () => {
-        const NewRoot = require('./component/root').default;
+    module.hot.accept('./root', () => {
+        const NewRoot = require('./root').default;
         ReactDOM.render(
             <AppContainer>
                 <NewRoot/>
